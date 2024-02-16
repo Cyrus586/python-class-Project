@@ -3,7 +3,7 @@ import random
 print("WELCOME TO THE GAME OF ROCK PAPER AND SCISSORS!!!")
 
 x = 1
-game_rounds=int(input("Enter the number if rounds you would like to play: "))
+game_rounds=int(input("Enter the number of rounds you would like to play: "))
 
 game_options=("rock", "paper", "scissor")
 
