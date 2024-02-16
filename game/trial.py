@@ -1,5 +1,12 @@
 import random
 
+print("*****       ******     *******         ")
+print("*    *      *     *    *            ")
+print("*   *       *     *    *******        ")
+print("* *         * * *            *      ")
+print("*  *        *          *     *     ")
+print("*    *      *          *******       ")
+
 print("WELCOME TO THE GAME OF ROCK PAPER AND SCISSORS!!!")
 
 x = 1
@@ -20,7 +27,7 @@ while x <= game_rounds:
 
     if player_choice == computer_choice:
         print("It's a Tie!")
-
+        
     elif player_choice == "rock" and computer_choice == "scissor":
         print("You Win!")
 
