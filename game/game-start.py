@@ -1,9 +1,5 @@
+
 import random
-
-# class Game_load_screen():
-#     def __init__(self):
-#         self.game = Game_Rock_Paper_Scissors()
-
 
 
 class Game_Rock_Paper_Scissors:
