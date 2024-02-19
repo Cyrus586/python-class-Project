@@ -1,1 +1,1 @@
-# python-class-Project chat bot using API and python
+# python-class-Project advanced rock-paper-scissors game using python
