@@ -1,8 +1,6 @@
-
+import random
 from main import *
 from game_start import *
-import time
-
 
 class Game_Setup(Main):
     def Play_game_setup(self):
@@ -43,7 +41,7 @@ class Game_options(Game_Setup):
     def play_with_computer(self):
         while True:
             
-            print(" ☆☆☆☆☆☆☆☆☆☆☆ L E T 'S P L A Y ! ☆☆☆☆☆☆☆☆☆☆☆ ")
+            print("Lets play rock paper scissors game! ")
             print("---------------------------------------------")
             user_input = input("Would you like to play rock paper scissors (yes/no): ").lower()
             
