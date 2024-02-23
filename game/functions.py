@@ -13,7 +13,7 @@ class Game_Rock_Paper_Scissors:
     # Player choice to pick from the list self.choices
     def get_payer_choice(self):
         while True:
-            player_choice = input("Enter your choice (rock, paper, scissors, lizard, spock): ").lower()
+            player_choice = input("> Enter your choice (rock, paper, scissors, lizard, spock) >: ").lower()
             if player_choice in self.choices:
                 return player_choice
             else:
@@ -29,14 +29,14 @@ class Game_Rock_Paper_Scissors:
         elif difficulty == "medium":
             # making the computer to win more often 50%
             print(f"You chose difficulty level: {difficulty}")
-            choice_with_bias = self.choices + ["rock", "paper", "scissors", "lizard", "spock"]
+            choice_with_bias = self.choices + ["rock", "paper", "scissors"]
             return random.choice(choice_with_bias)
         elif difficulty == "hard":
             # making the computer to always win more often 80%
             print(f"You chose difficulty level: {difficulty}")
             
             if self.wins > self.losses:
-                return random.choice(["paper", "scissors", "lizard", "spock"])
+                return random.choice(["paper", "scissors"])
             else:
                 return random.choice(["rock", "paper", "scissors", "lizard"]) 
         
@@ -73,6 +73,40 @@ class Main(Game_Rock_Paper_Scissors):
             self.losses += 1
             return "Computer wins, you lose"
         
+
+
+# Game_setup inherited All other classes from main
+
+class Game_Setup(Main):
+    def Play_game_setup(self):
+        while True:
+            print("\n")
+            print("===========================================================")
+            print("=                                                         =")
+            print("=      WELCOME TO ROCK, PAPER AND SCISSORS GAME           =")
+            print("=                                                         =")
+            print("===========================================================")
+            print("SELECT ONE OPTION")
+            print("-------------------------------")
+            print("\n")
+            print("A. Play against the computer")
+            print("B. Play with a friend")
+            print("C. Exit the game")
+            print("\n")
+            choice = input("Enter your Choice (A, B, C): ")
+            
+            if choice == "A" or choice == "a":
+                self.play_with_computer()
+            elif choice == "B" or choice == "b":
+                self.play_with_friend()
+            elif choice == "C" or choice == "c":
+                print("-------------------------------")
+                print("Thanks for visiting our developing game")
+                break
+            else:
+                print("Invalid Choice, pick from (A, B, C)")
+
+
 
 
 

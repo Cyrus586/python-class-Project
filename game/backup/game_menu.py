@@ -1,6 +1,7 @@
 import random
+import time
 from main import *
-from game_start import *
+from functions import *
 
 class Game_Setup(Main):
     def Play_game_setup(self):
@@ -100,7 +101,37 @@ class Game_options(Game_Setup):
            
     
     def play_with_friend(self):
-        print("This feature is not available right now please come back in afew days")
+        while True:
+            player_1_choice = self.get_player_choice()
+            print("\nPlayer 2, Please look away...!")
+            print("Press Enter when ready to continue....")
+            player_2_choice = self.get_player_choice()
+            print("\nPlayer 2 has made their choice. Player 1, you can Look now.")
+            print(f"\nPlayer 1 choice: {player_1_choice}")
+            print("Player 2`s choice is hidden")
+            time.sleep(1)
+            print("\nCalculating results.....")
+            time.sleep(1)
+            
+            result = self.determine_winner(player_1_choice, player_2_choice)
+            print(result)
+            
+            if result == "You win!":
+                self.wins += 1
+                print("Player 1 wins!")
+            elif result == "Computer wins!":
+                self.losses += 1
+                print("Player 2 wins")
+            else:
+                self.draws += 1
+                print("It`s a draw!")
+            
+            play_again = input("Do you want to play again? (yes/no): ").lower()
+            if play_again != "yes":
+                print("Thanks for playing, COME BACK AGAIN")
+                print("------------------------------------------")
+
+                break
         
             
 

@@ -1,48 +1,15 @@
 
 from main import *
-from game_start import *
+from functions import *
 import time
 
 
-class Game_Setup(Main):
-    def Play_game_setup(self):
-        while True:
-            print("\n")
-            print("===========================================================")
-            print("=                                                         =")
-            print("=      WELCOME TO ROCK, PAPER AND SCISSORS GAME           =")
-            print("=                                                         =")
-            print("===========================================================")
-            print("SELECT ONE OPTION")
-            print("-------------------------------")
-            print("\n")
-            print("A. Play against the computer")
-            print("B. Play with a friend")
-            print("C. Exit the game")
-            print("\n")
-            choice = input("Enter your Choice (A, B, C): ")
-            
-            if choice == "A" or choice == "a":
-                self.play_with_computer()
-            elif choice == "B" or choice == "b":
-                self.play_with_friend()
-            elif choice == "C" or choice == "c":
-                print("-------------------------------")
-                print("Thanks for visiting our developing game")
-                break
-            else:
-                print("Invalid Choice, pick from (A, B, C)")
 
-
-
-
-
-
-
+# Game_options inherited All other classes from Game_setup
 class Game_options(Game_Setup):
     def play_with_computer(self):
         while True:
-            
+            print("\n")
             print(" ☆☆☆☆☆☆☆☆☆☆☆ L E T 'S P L A Y ! ☆☆☆☆☆☆☆☆☆☆☆ ")
             print("---------------------------------------------")
             user_input = input("Would you like to play rock paper scissors (yes/no): ").lower()
@@ -100,9 +67,62 @@ class Game_options(Game_Setup):
 
                 break
            
-    
+        
+
     def play_with_friend(self):
-        print("This feature is not available right now please come back in afew days")
+        while True:
+            print(" ☆☆☆☆☆☆☆☆☆☆☆ L E T 'S   P L A Y   T O G E T H E R ! ☆☆☆☆☆☆☆☆☆☆☆ ")
+            player_1_name = input("Please enter your username player 1: ").lower()
+            player_2_name = input("Please enter your username player 2: ").lower()
+            
+            player_1_choice = self.get_payer_choice()
+            print(f"\n{player_2_name}, Please look away...!")
+            print("Press Enter when ready to continue....")
+            player_2_choice = self.get_payer_choice()
+            print(f"\n{player_2_choice} has made their choice. {player_1_name}, you can Look now.")
+            print(f"\n{player_1_name} choice: {player_1_choice}")
+            print(f"{player_2_name}`s choice is hidden")
+            
+            time.sleep(1)
+            print("\nCalculating results.....")
+            print("================================")
+            time.sleep(1)
+            
+            result = self.determine_winner(player_1_choice, player_2_choice)
+            print(result)
+            
+            if result == "You win!":
+                self.wins += 1
+                print(f"{player_1_name} wins!")
+            elif result == "Computer wins!":
+                self.losses += 1
+                print(f"{player_2_name} wins")
+            else:
+                self.draws += 1
+                print("It`s a tie!")
+            
+            print(f"Wins: {self.wins}, Loses: {self.losses}, Draws: {self.draws}")
+            
+            if self.wins > self.losses:
+                # emojis 
+                emoji = "\U0001F600"
+                print("You are on a wining streak! keep it up", emoji)
+            elif self.losses > self.wins:
+                # emojis 
+                emoji = "\U0001F62A"
+                print("The computer seems to have your number. Can you turn the tide?", emoji)
+            else:
+                # emojis 
+                emoji = "\U0001F923"
+                print("Its neck and neck! Keep playing to see who comes out on top.", emoji)
+            
+            print("---------------------------------------------")
+            play_again = input("Do you want to play again? (yes/no): ").lower()
+            if play_again != "yes":
+                print("Thanks for playing, COME BACK AGAIN")
+                print("------------------------------------------")
+
+                break
         
             
 
