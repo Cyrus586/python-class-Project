@@ -81,7 +81,7 @@
         "kind": 6,
         "importPath": "game.functions",
         "description": "game.functions",
-        "peekOfCode": "class Game_Rock_Paper_Scissors:\n    def __init__(self) :\n        self.choices = [\"rock\", \"paper\", \"scissors\"]\n        self.load_scores()\n    # appending to the score.txt file\n    def load_scores(self):\n        try:\n            with open(\"score.txt\", \"r+\") as file:\n                scores = file.readlines()\n                # checking the score.txt if it has values so that we catch the error message",
+        "peekOfCode": "class Game_Rock_Paper_Scissors:\n    def __init__(self) :\n        self.choices = [\"rock\", \"paper\", \"scissors\"]\n        # polymorphism\n        self.load_scores()\n    def number():\n        pass\n    # appending to the score.txt file\n    # file handling\n    def load_scores(self):",
         "detail": "game.functions",
         "documentation": {}
     },
@@ -90,7 +90,7 @@
         "kind": 6,
         "importPath": "game.functions",
         "description": "game.functions",
-        "peekOfCode": "class Main(Game_Rock_Paper_Scissors):\n    # a function which will determine the winner if the choices are the same or different\n    def determine_winner(self, player_choice, computer_choice): \n        if player_choice == computer_choice:\n            self.draws += 1\n            return \"It is a tie\"\n        elif (player_choice == \"rock\" and computer_choice == \"scissors\"):\n            self.wins += 1\n            return \"You win!, Rock crushes scissors!\"\n        elif (player_choice == \"paper\" and computer_choice == \"rock\"):",
+        "peekOfCode": "class Main(Game_Rock_Paper_Scissors):\n    # a function which will determine the winner if the choices are the same or different\n    def determine_winner(self, player_choice, computer_choice): \n        if player_choice == computer_choice:\n            # concatinating\n            self.draws += 1\n            return \"It is a tie\"\n        elif (player_choice == \"rock\" and computer_choice == \"scissors\"):\n            self.wins += 1\n            return \"You win!, Rock crushes scissors!\"",
         "detail": "game.functions",
         "documentation": {}
     },
@@ -99,7 +99,7 @@
         "kind": 6,
         "importPath": "game.functions",
         "description": "game.functions",
-        "peekOfCode": "class Game_Setup(Main):\n    def Play_game_setup(self):\n        while True:\n            print(\"\\n\")\n            print(\"===========================================================\")\n            print(\"=                                                         =\")\n            print(\"=      WELCOME TO ROCK, PAPER AND SCISSORS GAME           =\")\n            print(\"=                                                         =\")\n            print(\"===========================================================\")\n            print(\"SELECT ONE OPTION\")",
+        "peekOfCode": "class Game_Setup(Main):\n    def Play_game_setup(self):\n        # while loops\n        while True:\n            print(\"\\n\")\n            print(\"===========================================================\")\n            print(\"=                                                         =\")\n            print(\"=      WELCOME TO ROCK, PAPER AND SCISSORS GAME           =\")\n            print(\"=                                                         =\")\n            print(\"===========================================================\")",
         "detail": "game.functions",
         "documentation": {}
     },

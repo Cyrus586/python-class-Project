@@ -5,9 +5,15 @@ import random
 class Game_Rock_Paper_Scissors:
     def __init__(self) :
         self.choices = ["rock", "paper", "scissors"]
+        # polymorphism
         self.load_scores()
         
+    
+    def number():
+        pass
+    
     # appending to the score.txt file
+    # file handling
     def load_scores(self):
         try:
             with open("score.txt", "r+") as file:
@@ -24,13 +30,14 @@ class Game_Rock_Paper_Scissors:
                     self.losses = 0
                     self.draws = 0
                     
-            
+        # error handling
         except FileNotFoundError:
             self.wins = 0
             self.losses = 0
             self.draws = 0
+            print("File Not found!")
             
-            
+    # writting to score.txt
     def save_scores(self):
         with open("score.txt", "w+") as file:
             file.write(f"WINS | {self.wins} |")
@@ -73,7 +80,7 @@ class Game_Rock_Paper_Scissors:
         else:
             raise ValueError("Invalid difficulty level. please choose (easy, medium, hard).")
         # ---------------------------------------------------
-            
+           
 
 
 # CLASS TO CHECK THE WINING INPUT FROM BOTH THE USER AND THE COMPUTER
@@ -81,6 +88,7 @@ class Main(Game_Rock_Paper_Scissors):
     # a function which will determine the winner if the choices are the same or different
     def determine_winner(self, player_choice, computer_choice): 
         if player_choice == computer_choice:
+            # concatinating
             self.draws += 1
             return "It is a tie"
         elif (player_choice == "rock" and computer_choice == "scissors"):
@@ -102,6 +110,7 @@ class Main(Game_Rock_Paper_Scissors):
 
 class Game_Setup(Main):
     def Play_game_setup(self):
+        # while loops
         while True:
             print("\n")
             print("===========================================================")
@@ -117,7 +126,7 @@ class Game_Setup(Main):
             print("C. Exit the game")
             print("\n")
             choice = input("Enter your Choice (A, B, C): ")
-            
+            # decison making
             if choice == "A" or choice == "a":
                 self.play_with_computer()
             elif choice == "B" or choice == "b":
