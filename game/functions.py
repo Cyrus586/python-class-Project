@@ -4,20 +4,50 @@ import random
 # MAIN FUNCTIONS AND THE CLASS FOR THE USER AND THE COMP INPUTS
 class Game_Rock_Paper_Scissors:
     def __init__(self) :
-        self.choices = ["rock", "paper", "scissors", "lizard", "spock"]
-        self.wins = 0
-        self.losses = 0
-        self.draws = 0
-        self.difficulty = "easy"
+        self.choices = ["rock", "paper", "scissors"]
+        self.load_scores()
         
+    # appending to the score.txt file
+    def load_scores(self):
+        try:
+            with open("score.txt", "r+") as file:
+                scores = file.readlines()
+                # checking the score.txt if it has values so that we catch the error message
+                if len(scores) >= 3:
+                    self.wins = int(scores[0].strip())
+                    self.losses = int(scores[1].strip())
+                    self.draws = int(scores[2].strip())
+
+                    
+                else:
+                    self.wins = 0
+                    self.losses = 0
+                    self.draws = 0
+                    
+            
+        except FileNotFoundError:
+            self.wins = 0
+            self.losses = 0
+            self.draws = 0
+            
+            
+    def save_scores(self):
+        with open("score.txt", "w+") as file:
+            file.write(f"WINS | {self.wins} |")
+            file.write(f" LOSES | {self.losses} |")
+            file.write(f" DRAWS | {self.draws} |")
+            
+        
+        
+           
     # Player choice to pick from the list self.choices
     def get_payer_choice(self):
         while True:
-            player_choice = input("> Enter your choice (rock, paper, scissors, lizard, spock) >: ").lower()
+            player_choice = input("> Enter your choice (rock, paper, scissors) >: ").lower()
             if player_choice in self.choices:
                 return player_choice
             else:
-                print("Invalid choice. Please enter (rock, paper, scissors, lizard, spock). ")
+                print("Invalid choice. Please enter (rock, paper, scissors). ")
     
     # Computer choice to pick from the list self.choices but on random
     def get_computer_choice(self, difficulty):
@@ -38,7 +68,7 @@ class Game_Rock_Paper_Scissors:
             if self.wins > self.losses:
                 return random.choice(["paper", "scissors"])
             else:
-                return random.choice(["rock", "paper", "scissors", "lizard"]) 
+                return random.choice(["rock", "paper", "scissors"]) 
         
         else:
             raise ValueError("Invalid difficulty level. please choose (easy, medium, hard).")
@@ -53,22 +83,15 @@ class Main(Game_Rock_Paper_Scissors):
         if player_choice == computer_choice:
             self.draws += 1
             return "It is a tie"
-        elif (player_choice == "rock" and computer_choice == "scissors" or computer_choice == "lizard"):
+        elif (player_choice == "rock" and computer_choice == "scissors"):
             self.wins += 1
-            return "You win!, Rock crushes scissors or lizard!"
-        elif (player_choice == "paper" and computer_choice == "rock" or computer_choice == "spock"):
+            return "You win!, Rock crushes scissors!"
+        elif (player_choice == "paper" and computer_choice == "rock"):
             self.wins += 1
-            return "You win!, Paper covers rock or disproves spock!"
-        elif (player_choice == "scissors" and computer_choice == "paper" or computer_choice == "lizard"):
+            return "You win!, Paper covers rock!"
+        elif (player_choice == "scissors" and computer_choice == "paper"):
             self.wins += 1
-            return "You win!, Scissors cuts paper or decapitates lizard!"
-        
-        elif (player_choice == "lizard" and computer_choice == "spock" or computer_choice == "paper"):
-            self.wins += 1
-            return "You win!, Lizard poisons spock or eats paper!"
-        elif (player_choice == "spock" and computer_choice == "scissors" or computer_choice == "rock"):
-            self.wins += 1
-            return "You win!, spock smashes scissors or vaporizes rock!"
+            return "You win!, Scissors cuts paper!"
         else:
             self.losses += 1
             return "Computer wins, you lose"

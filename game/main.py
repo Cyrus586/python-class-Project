@@ -1,8 +1,7 @@
 
-from main import *
-from functions import *
+from functions import Game_Setup
 import time
-
+import getpass
 
 
 # Game_options inherited All other classes from Game_setup
@@ -44,6 +43,20 @@ class Game_options(Game_Setup):
             
             
             print("\nGame Over!")
+            
+            self.save_scores()
+            # reading from the score.txt
+            print("---------------- SCORES -------------------")
+            
+            with open("score.txt", "r") as file:
+                scores = file.read()
+            print(scores)
+            
+            print(" ------------------------------------------")
+                 
+                 
+                 
+                 
             print(f"Rounds: {num_rounds}, Wins: {self.wins}, Loses: {self.losses}, Draws: {self.draws}")
             
             if self.wins > self.losses:
@@ -67,39 +80,84 @@ class Game_options(Game_Setup):
 
                 break
            
-        
+    
+    def player_choices(self):
+        while True:
+            player_choice = getpass.getpass("> Enter your choice (rock, paper, scissors, lizard, spock) >: ").lower()
+            if player_choice in self.choices:
+                return player_choice
+            else:
+                print("Invalid choice. Please enter (rock, paper, scissors, lizard, spock). ")
 
+
+
+
+
+class Game_Play(Game_options):
+        
     def play_with_friend(self):
         while True:
-            print(" ☆☆☆☆☆☆☆☆☆☆☆ L E T 'S   P L A Y   T O G E T H E R ! ☆☆☆☆☆☆☆☆☆☆☆ ")
+            print("\n")
+            print("☆☆☆☆☆☆☆☆☆☆☆ L E T 'S   P L A Y   T O G E T H E R ! ☆☆☆☆☆☆☆☆☆☆☆ ")
+            print("\n")
             player_1_name = input("Please enter your username player 1: ").lower()
             player_2_name = input("Please enter your username player 2: ").lower()
             
-            player_1_choice = self.get_payer_choice()
+            player_1_choice = self.player_choices()
             print(f"\n{player_2_name}, Please look away...!")
             print("Press Enter when ready to continue....")
-            player_2_choice = self.get_payer_choice()
-            print(f"\n{player_2_choice} has made their choice. {player_1_name}, you can Look now.")
+            player_2_choice = self.player_choices()
+            print(f"\n{player_2_name} has made their choice. {player_1_name}, you can Look now.")
             print(f"\n{player_1_name} choice: {player_1_choice}")
-            print(f"{player_2_name}`s choice is hidden")
+            print(f"{player_2_name}`s choice is {player_2_choice}")
             
             time.sleep(1)
             print("\nCalculating results.....")
             print("================================")
-            time.sleep(1)
+            time.sleep(3)
             
-            result = self.determine_winner(player_1_choice, player_2_choice)
+            
+            
+            def determine_winners(self, player_1_choice, player_2_choice):
+                if player_1_choice == player_2_choice:
+                    self.draws += 1
+                    return "It is a tie"
+                elif (player_1_choice == "rock" and player_2_choice == "scissors"):
+                    self.wins += 1
+                    return f"{player_1_name} win!, Rock crushes scissors!"
+                elif (player_1_choice == "paper" and player_2_choice == "rock"):
+                    self.wins += 1
+                    return f"{player_1_name} win!, Paper covers rock!"
+                elif (player_1_choice == "scissors" and player_2_choice == "paper"):
+                    self.wins += 1
+                    return f"{player_1_name} win!, Scissors cuts paper!"
+                else:
+                    self.losses += 1
+                    return f"{player_2_name} wins, {player_1_name} lose"
+                
+                
+                
+                
+            
+            
+            
+            result = determine_winners(self, player_1_choice, player_2_choice)
             print(result)
             
-            if result == "You win!":
-                self.wins += 1
-                print(f"{player_1_name} wins!")
-            elif result == "Computer wins!":
-                self.losses += 1
-                print(f"{player_2_name} wins")
-            else:
-                self.draws += 1
-                print("It`s a tie!")
+            
+            
+            
+            self.save_scores()
+            # reading from the score.txt
+            print("---------------- SCORES -------------------")
+            
+            with open("score.txt", "r") as file:
+                scores = file.read()
+            print(scores)
+            
+            print(" ------------------------------------------")
+              
+                 
             
             print(f"Wins: {self.wins}, Loses: {self.losses}, Draws: {self.draws}")
             
@@ -118,15 +176,16 @@ class Game_options(Game_Setup):
             
             print("---------------------------------------------")
             play_again = input("Do you want to play again? (yes/no): ").lower()
+            
             if play_again != "yes":
                 print("Thanks for playing, COME BACK AGAIN")
                 print("------------------------------------------")
 
                 break
+            
+            
+            
+            
         
             
-
-if __name__ == "__main__":
-    game = Game_options()
-    game.Play_game_setup()
 
