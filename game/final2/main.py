@@ -98,7 +98,6 @@ class Game_Play(Game_options):
     def play_with_friend(self):
         while True:
 
-            wins, losses, draws= 0,0,0
             print("\n")
             print("☆☆☆☆☆☆☆☆☆☆☆ L E T 'S   P L A Y   T O G E T H E R ! ☆☆☆☆☆☆☆☆☆☆☆ ")
             print("\n")
