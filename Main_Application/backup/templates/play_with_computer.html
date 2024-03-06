@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+</head>
+<body>
+    <h1>Rock Paper Scissors Game</h1>
+    <form action="/play_with_computer" method="POST">
+        <p>{{ result }}</p>
+        <input type="hidden" name="user_input" value="yes">
+        <input type="hidden" name="difficulty" value="{{ difficulty }}">
+        <input type="hidden" name="num_rounds" value="{{ num_rounds }}">
+        <input type="hidden" name="play_again" value="{{ play_again }}">
+        
+        <!-- Loop through each round -->
+        
+        
+        {% for round in range(1, num_rounds + 1) %}
+            <label for="player_choice">Enter your choice for Round {{ round }} (rock, paper, scissors): </label>
+            <input type="text" id="player_choice" name="player_choice" placeholder="rock/paper/scissors" required><br><br>
+        {% endfor %}
+        
+        
+        <label>Do you want to play again? (yes/no)</label>
+        
+        <input type="text" name="user_input" value="yes" style="display: none;">
+        <input type="text" name="play_again" placeholder="yes/no">
+        <input type="submit" value="Submit">
+        
+        
+        <input type="submit" value="Submit">
+    </form>
+    
+
+    <div>
+        {{ result | safe }} <!-- Display the result from the server -->
+    </div>
+</body>
+</html>
