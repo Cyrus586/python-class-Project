@@ -1,1 +1,1 @@
-# python-class-Project chat bot using API and python
+# Advanced rock, paper and scissors game using Python 
