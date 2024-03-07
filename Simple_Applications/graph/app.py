@@ -3,6 +3,7 @@
 from flask import Flask, render_template
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib import style 
 import base64
 import io
 
@@ -13,10 +14,11 @@ data = pd.read_csv('csv_file.csv')
 
 @app.route('/')
 def index():
+    style.use('ggplot')
     # Plot bar graph with adjusted bar width
     plt.figure(figsize=(10, 6))
     colors = ['blue', 'green', 'red', 'orange', 'purple']  # Define colors for bars
-    bar_width = 2  # Define the width of the bars
+    bar_width = 10  # Define the width of the bars
     plt.bar(data['Index'], data['Number of employees'], color=colors, width=bar_width)
     plt.title('Number of Employees by Index')
     plt.xlabel('Index')

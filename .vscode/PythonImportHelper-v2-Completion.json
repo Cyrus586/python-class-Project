@@ -173,6 +173,14 @@
         "documentation": {}
     },
     {
+        "label": "style",
+        "importPath": "matplotlib",
+        "description": "matplotlib",
+        "isExtraImport": true,
+        "detail": "matplotlib",
+        "documentation": {}
+    },
+    {
         "label": "base64",
         "kind": 6,
         "isExtraImport": true,
@@ -456,7 +464,7 @@
         "kind": 2,
         "importPath": "Simple_Applications.graph.app",
         "description": "Simple_Applications.graph.app",
-        "peekOfCode": "def index():\n    # Plot bar graph with adjusted bar width\n    plt.figure(figsize=(10, 6))\n    colors = ['blue', 'green', 'red', 'orange', 'purple']  # Define colors for bars\n    bar_width = 2  # Define the width of the bars\n    plt.bar(data['Index'], data['Number of employees'], color=colors, width=bar_width)\n    plt.title('Number of Employees by Index')\n    plt.xlabel('Index')\n    plt.ylabel('Number of Employees')\n    # Convert plot to base64 string",
+        "peekOfCode": "def index():\n    style.use('ggplot')\n    # Plot bar graph with adjusted bar width\n    plt.figure(figsize=(10, 6))\n    colors = ['blue', 'green', 'red', 'orange', 'purple']  # Define colors for bars\n    bar_width = 10  # Define the width of the bars\n    plt.bar(data['Index'], data['Number of employees'], color=colors, width=bar_width)\n    plt.title('Number of Employees by Index')\n    plt.xlabel('Index')\n    plt.ylabel('Number of Employees')",
         "detail": "Simple_Applications.graph.app",
         "documentation": {}
     },
@@ -465,7 +473,7 @@
         "kind": 5,
         "importPath": "Simple_Applications.graph.app",
         "description": "Simple_Applications.graph.app",
-        "peekOfCode": "app = Flask(__name__)\n# Load data from CSV\ndata = pd.read_csv('csv_file.csv')\n@app.route('/')\ndef index():\n    # Plot bar graph with adjusted bar width\n    plt.figure(figsize=(10, 6))\n    colors = ['blue', 'green', 'red', 'orange', 'purple']  # Define colors for bars\n    bar_width = 2  # Define the width of the bars\n    plt.bar(data['Index'], data['Number of employees'], color=colors, width=bar_width)",
+        "peekOfCode": "app = Flask(__name__)\n# Load data from CSV\ndata = pd.read_csv('csv_file.csv')\n@app.route('/')\ndef index():\n    style.use('ggplot')\n    # Plot bar graph with adjusted bar width\n    plt.figure(figsize=(10, 6))\n    colors = ['blue', 'green', 'red', 'orange', 'purple']  # Define colors for bars\n    bar_width = 10  # Define the width of the bars",
         "detail": "Simple_Applications.graph.app",
         "documentation": {}
     },
@@ -474,7 +482,7 @@
         "kind": 5,
         "importPath": "Simple_Applications.graph.app",
         "description": "Simple_Applications.graph.app",
-        "peekOfCode": "data = pd.read_csv('csv_file.csv')\n@app.route('/')\ndef index():\n    # Plot bar graph with adjusted bar width\n    plt.figure(figsize=(10, 6))\n    colors = ['blue', 'green', 'red', 'orange', 'purple']  # Define colors for bars\n    bar_width = 2  # Define the width of the bars\n    plt.bar(data['Index'], data['Number of employees'], color=colors, width=bar_width)\n    plt.title('Number of Employees by Index')\n    plt.xlabel('Index')",
+        "peekOfCode": "data = pd.read_csv('csv_file.csv')\n@app.route('/')\ndef index():\n    style.use('ggplot')\n    # Plot bar graph with adjusted bar width\n    plt.figure(figsize=(10, 6))\n    colors = ['blue', 'green', 'red', 'orange', 'purple']  # Define colors for bars\n    bar_width = 10  # Define the width of the bars\n    plt.bar(data['Index'], data['Number of employees'], color=colors, width=bar_width)\n    plt.title('Number of Employees by Index')",
         "detail": "Simple_Applications.graph.app",
         "documentation": {}
     },
