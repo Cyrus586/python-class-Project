@@ -15,7 +15,7 @@ def madlib():
     famous = input("Famous Person: ")
 
     madlib = f"\nDear, {per_name}. \nI am writing this email to informed you that something funny happened at \
-{place}. \nWhen I was, {verb1} the trash out, I stumbled upon a {animal} doing push-ups and {exer}.\
+{place}. \nWhen I was, {verb1} the trash out, and I stumbled upon an {animal} doing push-ups and {exer}.\
 \nThis {noun1} was dressed in a bunny costume. \nIt had a large {face} and a cute {adj1} tail. \
 \nI asked this {vege} head what was he doing by the trash cans? \nHe replied, \"I'm training for the  \
 Easter Day {act}. \nRabbits always win, so I thought I would {verb2} like one and maybe finally win!\" \

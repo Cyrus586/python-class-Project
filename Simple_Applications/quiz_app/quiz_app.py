@@ -2,7 +2,7 @@ from random import sample
 
 print("\t=========================================")
 print("\t=                                       =")
-print("\t=   WELCOME TO PROGRAMMING QUIZ GAME    =")
+print("\t=   WELCOME TO OUR PROGRAMMING QUIZ GAME    =")
 print("\t=                                       =")
 print("\t=========================================\n")
 

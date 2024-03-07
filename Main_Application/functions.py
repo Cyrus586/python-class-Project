@@ -9,8 +9,6 @@ class Game_Rock_Paper_Scissors:
         self.load_scores()
         
     
-    def number():
-        pass
     
     # appending to the score.txt file
     # file handling
@@ -66,7 +64,7 @@ class Game_Rock_Paper_Scissors:
         elif difficulty == "medium":
             # making the computer to win more often 50%
             print(f"You chose difficulty level: {difficulty}")
-            choice_with_bias = self.choices + ["rock", "paper", "scissors"]
+            choice_with_bias = ["paper", "scissors"]
             return random.choice(choice_with_bias)
         elif difficulty == "hard":
             # making the computer to always win more often 80%

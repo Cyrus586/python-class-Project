@@ -311,7 +311,7 @@
         "kind": 6,
         "importPath": "Main_Application.functions",
         "description": "Main_Application.functions",
-        "peekOfCode": "class Game_Rock_Paper_Scissors:\n    def __init__(self) :\n        self.choices = [\"rock\", \"paper\", \"scissors\"]\n        # polymorphism\n        self.load_scores()\n    def number():\n        pass\n    # appending to the score.txt file\n    # file handling\n    def load_scores(self):",
+        "peekOfCode": "class Game_Rock_Paper_Scissors:\n    def __init__(self) :\n        self.choices = [\"rock\", \"paper\", \"scissors\"]\n        # polymorphism\n        self.load_scores()\n    # appending to the score.txt file\n    # file handling\n    def load_scores(self):\n        try:\n            with open(\"score.txt\", \"r+\") as file:",
         "detail": "Main_Application.functions",
         "documentation": {}
     },
