@@ -1,0 +1,44 @@
+
+    
+
+        
+    
+        
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <div class="container-2">
+        <div class="heading">
+            <h1>Playing with a computer</h1>
+            
+        </div>
+        <form action="/play_with_computer" method="POST">
+            <label for="user_input">Would you like to play rock paper scissors (yes/no): </label>
+            <input type="text" id="user_input" name="user_input" required><br><br>
+            <label for="difficulty">Choose difficult level (easy, medium, hard): </label>
+            <input type="text" id="difficulty" name="difficulty" required><br><br>
+            <!--<label for="num_rounds">How many rounds do you want to play? </label>
+            <input type="number" id="num_rounds" name="num_rounds" required><br><br>-->
+            <label for="player_choice">Enter your choice (rock, paper, scissors): </label>
+            <input type="text" id="player_choice" name="player_choice" required><br><br>
+            <button type="submit">Submit</button>
+        </form>
+        <p>{{ result|safe }}</p>
+        <p>----------------------------------------------------------------------------------------------------------------------------------</p>
+        <form action="/play_with_computer" method="POST">
+            <label for="player_choice">Do you want to play again? </label>
+            <input type="text" name="play_again" value="yes">
+            <button type="submit">Play Again?</button>
+        </form>
+    </div>
+</body>
+</html>
+

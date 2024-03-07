@@ -1,0 +1,742 @@
+[
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Game_Play",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Game_Play",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "sample",
+        "importPath": "random",
+        "description": "random",
+        "isExtraImport": true,
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "Game_Setup",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "Game_Setup",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "getpass",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "getpass",
+        "description": "getpass",
+        "detail": "getpass",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "io",
+        "description": "io",
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "hangman_art,",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hangman_art.",
+        "description": "hangman_art.",
+        "detail": "hangman_art.",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "Main_Application.backup.app",
+        "description": "Main_Application.backup.app",
+        "peekOfCode": "def index():\n    return render_template('index.html')\n@app.route('/play_with_computer', methods=['GET', 'POST'])\ndef play_with_computer():\n    result = \"\"\n    num_rounds = 0 \n    play_again = \"yes\"  # Initialize play_again variable\n    if request.method == 'POST':\n        user_input = request.form.get('user_input')\n        if user_input != \"yes\":",
+        "detail": "Main_Application.backup.app",
+        "documentation": {}
+    },
+    {
+        "label": "play_with_computer",
+        "kind": 2,
+        "importPath": "Main_Application.backup.app",
+        "description": "Main_Application.backup.app",
+        "peekOfCode": "def play_with_computer():\n    result = \"\"\n    num_rounds = 0 \n    play_again = \"yes\"  # Initialize play_again variable\n    if request.method == 'POST':\n        user_input = request.form.get('user_input')\n        if user_input != \"yes\":\n            return render_template('play_with_computer.html', result=\"The game has been reset\")\n        time.sleep(2)\n        result += \"Welcome to this wonderful adventure of Rock Paper Scissors!<br><br>\"",
+        "detail": "Main_Application.backup.app",
+        "documentation": {}
+    },
+    {
+        "label": "play_with_friend",
+        "kind": 2,
+        "importPath": "Main_Application.backup.app",
+        "description": "Main_Application.backup.app",
+        "peekOfCode": "def play_with_friend():\n    if request.method == 'POST':\n        player_1_name = request.form['player_1_name']\n        player_2_name = request.form['player_2_name']\n        player_1_choice = request.form['player_1_choice']\n        player_2_choice = request.form['player_2_choice']\n        class SelectWinner(Game_Play):\n            def __init__(self):\n                self.wins = 0\n                self.losses = 0",
+        "detail": "Main_Application.backup.app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "Main_Application.backup.app",
+        "description": "Main_Application.backup.app",
+        "peekOfCode": "app = Flask(__name__)\n# Instantiate the Game_Play class\ngame = Game_Play()\n@app.route('/')\ndef index():\n    return render_template('index.html')\n@app.route('/play_with_computer', methods=['GET', 'POST'])\ndef play_with_computer():\n    result = \"\"\n    num_rounds = 0 ",
+        "detail": "Main_Application.backup.app",
+        "documentation": {}
+    },
+    {
+        "label": "game",
+        "kind": 5,
+        "importPath": "Main_Application.backup.app",
+        "description": "Main_Application.backup.app",
+        "peekOfCode": "game = Game_Play()\n@app.route('/')\ndef index():\n    return render_template('index.html')\n@app.route('/play_with_computer', methods=['GET', 'POST'])\ndef play_with_computer():\n    result = \"\"\n    num_rounds = 0 \n    play_again = \"yes\"  # Initialize play_again variable\n    if request.method == 'POST':",
+        "detail": "Main_Application.backup.app",
+        "documentation": {}
+    },
+    {
+        "label": "Game_Rock_Paper_Scissors",
+        "kind": 6,
+        "importPath": "Main_Application.backup.functions",
+        "description": "Main_Application.backup.functions",
+        "peekOfCode": "class Game_Rock_Paper_Scissors:\n    def __init__(self) :\n        self.choices = [\"rock\", \"paper\", \"scissors\"]\n        # polymorphism\n        self.load_scores()\n    def number():\n        pass\n    # appending to the score.txt file\n    # file handling\n    def load_scores(self):",
+        "detail": "Main_Application.backup.functions",
+        "documentation": {}
+    },
+    {
+        "label": "Main",
+        "kind": 6,
+        "importPath": "Main_Application.backup.functions",
+        "description": "Main_Application.backup.functions",
+        "peekOfCode": "class Main(Game_Rock_Paper_Scissors):\n    # a function which will determine the winner if the choices are the same or different\n    def determine_winner(self, player_choice, computer_choice): \n        if player_choice == computer_choice:\n            # concatinating\n            self.draws += 1\n            return \"It is a tie\"\n        elif (player_choice == \"rock\" and computer_choice == \"scissors\"):\n            self.wins += 1\n            return \"You win!, Rock crushes scissors!\"",
+        "detail": "Main_Application.backup.functions",
+        "documentation": {}
+    },
+    {
+        "label": "Game_Setup",
+        "kind": 6,
+        "importPath": "Main_Application.backup.functions",
+        "description": "Main_Application.backup.functions",
+        "peekOfCode": "class Game_Setup(Main):\n    def Play_game_setup(self):\n        # while loops\n        while True:\n            print(\"\\n\")\n            print(\"===========================================================\")\n            print(\"=                                                         =\")\n            print(\"=      WELCOME TO ROCK, PAPER AND SCISSORS GAME           =\")\n            print(\"=                                                         =\")\n            print(\"===========================================================\")",
+        "detail": "Main_Application.backup.functions",
+        "documentation": {}
+    },
+    {
+        "label": "Game_options",
+        "kind": 6,
+        "importPath": "Main_Application.backup.main",
+        "description": "Main_Application.backup.main",
+        "peekOfCode": "class Game_options(Game_Setup):\n    def play_with_computer(self, num_rounds, difficulty):\n        while True:\n            print(\"\\n\")\n            print(\" ☆☆☆☆☆☆☆☆☆☆☆ L E T 'S P L A Y ! ☆☆☆☆☆☆☆☆☆☆☆ \")\n            print(\"---------------------------------------------\")\n            user_input = input(\"Would you like to play rock paper scissors (yes/no): \").lower()\n            if user_input != \"yes\":\n                print(\"Its fine if you dont want to play\")\n                print(\"------------------------------------------\")",
+        "detail": "Main_Application.backup.main",
+        "documentation": {}
+    },
+    {
+        "label": "Game_Play",
+        "kind": 6,
+        "importPath": "Main_Application.backup.main",
+        "description": "Main_Application.backup.main",
+        "peekOfCode": "class Game_Play(Game_options):\n    def play_with_friend(self):\n        while True:\n            print(\"\\n\")\n            print(\"☆☆☆☆☆☆☆☆☆☆☆ L E T 'S   P L A Y   T O G E T H E R ! ☆☆☆☆☆☆☆☆☆☆☆ \")\n            print(\"\\n\")\n            player_1_name = input(\"Please enter your username player 1: \").lower()\n            player_2_name = input(\"Please enter your username player 2: \").lower()\n            player_1_choice = self.player_choices()\n            print(f\"\\n{player_2_name}, Please look away...!\")",
+        "detail": "Main_Application.backup.main",
+        "documentation": {}
+    },
+    {
+        "label": "play_with_computer",
+        "kind": 2,
+        "importPath": "Main_Application.backup.temp",
+        "description": "Main_Application.backup.temp",
+        "peekOfCode": "def play_with_computer():\n    result = \"\"\n    play_again = \"yes\"  # Initialize play_again variable\n    if request.method == 'POST':\n        user_input = request.form.get('user_input')\n        if user_input.lower() != \"yes\":\n            return render_template('play_with_computer.html', result=\"It's fine if you don't want to play\")\n        result += \"Welcome to this wonderful adventure of Rock Paper Scissors!<br>Starting...\"\n        difficulty = request.form.get('difficulty')\n        if difficulty not in [\"easy\",\"medium\",\"hard\"]:",
+        "detail": "Main_Application.backup.temp",
+        "documentation": {}
+    },
+    {
+        "label": "Game_Rock_Paper_Scissors",
+        "kind": 6,
+        "importPath": "Main_Application.functions",
+        "description": "Main_Application.functions",
+        "peekOfCode": "class Game_Rock_Paper_Scissors:\n    def __init__(self) :\n        self.choices = [\"rock\", \"paper\", \"scissors\"]\n        # polymorphism\n        self.load_scores()\n    def number():\n        pass\n    # appending to the score.txt file\n    # file handling\n    def load_scores(self):",
+        "detail": "Main_Application.functions",
+        "documentation": {}
+    },
+    {
+        "label": "Main",
+        "kind": 6,
+        "importPath": "Main_Application.functions",
+        "description": "Main_Application.functions",
+        "peekOfCode": "class Main(Game_Rock_Paper_Scissors):\n    # a function which will determine the winner if the choices are the same or different\n    def determine_winner(self, player_choice, computer_choice): \n        if player_choice == computer_choice:\n            # concatinating\n            self.draws += 1\n            return \"It is a tie\"\n        elif (player_choice == \"rock\" and computer_choice == \"scissors\"):\n            self.wins += 1\n            return \"You win!, Rock crushes scissors!\"",
+        "detail": "Main_Application.functions",
+        "documentation": {}
+    },
+    {
+        "label": "Game_Setup",
+        "kind": 6,
+        "importPath": "Main_Application.functions",
+        "description": "Main_Application.functions",
+        "peekOfCode": "class Game_Setup(Main):\n    def Play_game_setup(self):\n        # while loops\n        while True:\n            print(\"\\n\")\n            print(\"===========================================================\")\n            print(\"=                                                         =\")\n            print(\"=      WELCOME TO ROCK, PAPER AND SCISSORS GAME           =\")\n            print(\"=                                                         =\")\n            print(\"===========================================================\")",
+        "detail": "Main_Application.functions",
+        "documentation": {}
+    },
+    {
+        "label": "Game_options",
+        "kind": 6,
+        "importPath": "Main_Application.main",
+        "description": "Main_Application.main",
+        "peekOfCode": "class Game_options(Game_Setup):\n    def play_with_computer(self):\n        while True:\n            print(\"\\n\")\n            print(\" ☆☆☆☆☆☆☆☆☆☆☆ L E T 'S P L A Y ! ☆☆☆☆☆☆☆☆☆☆☆ \")\n            print(\"---------------------------------------------\")\n            user_input = input(\"Would you like to play rock paper scissors (yes/no): \").lower()\n            if user_input != \"yes\":\n                print(\"Its fine if you dont want to play\")\n                print(\"------------------------------------------\")",
+        "detail": "Main_Application.main",
+        "documentation": {}
+    },
+    {
+        "label": "Game_Play",
+        "kind": 6,
+        "importPath": "Main_Application.main",
+        "description": "Main_Application.main",
+        "peekOfCode": "class Game_Play(Game_options):\n    def play_with_friend(self):\n        while True:\n            print(\"\\n\")\n            print(\"☆☆☆☆☆☆☆☆☆☆☆ L E T 'S   P L A Y   T O G E T H E R ! ☆☆☆☆☆☆☆☆☆☆☆ \")\n            print(\"\\n\")\n            player_1_name = input(\"Please enter your username player 1: \").lower()\n            player_2_name = input(\"Please enter your username player 2: \").lower()\n            player_1_choice = self.player_choices()\n            print(f\"\\n{player_2_name}, Please look away...!\")",
+        "detail": "Main_Application.main",
+        "documentation": {}
+    },
+    {
+        "label": "madlib",
+        "kind": 2,
+        "importPath": "Simple_Applications.function.app",
+        "description": "Simple_Applications.function.app",
+        "peekOfCode": "def madlib():\n    per_name = input(\"\\n\\nPerson's Name: \")\n    place = input(\"Place: \")\n    verb1 = input(\"Verb: \")\n    animal = input(\"Animal: \")\n    exer = input(\"An Exercise: \")\n    noun1 = input(\"Noun: \")\n    face = input(\"Part of Face: \")\n    adj1 = input(\"Adjective: \")\n    vege = input(\"Vegetable: \")",
+        "detail": "Simple_Applications.function.app",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_grade",
+        "kind": 2,
+        "importPath": "Simple_Applications.grade.grade",
+        "description": "Simple_Applications.grade.grade",
+        "peekOfCode": "def calculate_grade(marks, total_mark):\n    percentage = (marks / total_mark) * 100\n    if percentage >= 90:\n        grade = \"A*\"\n    elif percentage >= 80:\n        grade = \"A\"\n    elif percentage >= 70:\n        grade = \"B\"\n    elif percentage >= 60:\n        grade = \"C\"",
+        "detail": "Simple_Applications.grade.grade",
+        "documentation": {}
+    },
+    {
+        "label": "get_valid_integer_input",
+        "kind": 2,
+        "importPath": "Simple_Applications.grade.grade",
+        "description": "Simple_Applications.grade.grade",
+        "peekOfCode": "def get_valid_integer_input(prompt, min_val=0, max_val=None):\n    while True:\n        try:\n            val = int(input(prompt))\n            if val < min_val:\n                print(\n                    f\"Value should be greater than or equal to {min_val}. Please try again.\"\n                )\n            elif max_val is not None and val > max_val:\n                print(",
+        "detail": "Simple_Applications.grade.grade",
+        "documentation": {}
+    },
+    {
+        "label": "num_subjects",
+        "kind": 5,
+        "importPath": "Simple_Applications.grade.grade",
+        "description": "Simple_Applications.grade.grade",
+        "peekOfCode": "num_subjects = get_valid_integer_input(\"Enter the number of subjects: \", min_val=1)\nsubjects = []\nmarks = []\ntotal_marks = []\nfor i in range(1, num_subjects + 1):\n    subject_name = input(f\"Enter the name of subject {i}: \")\n    subjects.append(subject_name)\n    total_mark = get_valid_integer_input(\n        f\"Enter the total marks for subject {subject_name}: \", min_val=1\n    )",
+        "detail": "Simple_Applications.grade.grade",
+        "documentation": {}
+    },
+    {
+        "label": "subjects",
+        "kind": 5,
+        "importPath": "Simple_Applications.grade.grade",
+        "description": "Simple_Applications.grade.grade",
+        "peekOfCode": "subjects = []\nmarks = []\ntotal_marks = []\nfor i in range(1, num_subjects + 1):\n    subject_name = input(f\"Enter the name of subject {i}: \")\n    subjects.append(subject_name)\n    total_mark = get_valid_integer_input(\n        f\"Enter the total marks for subject {subject_name}: \", min_val=1\n    )\n    total_marks.append(total_mark)",
+        "detail": "Simple_Applications.grade.grade",
+        "documentation": {}
+    },
+    {
+        "label": "marks",
+        "kind": 5,
+        "importPath": "Simple_Applications.grade.grade",
+        "description": "Simple_Applications.grade.grade",
+        "peekOfCode": "marks = []\ntotal_marks = []\nfor i in range(1, num_subjects + 1):\n    subject_name = input(f\"Enter the name of subject {i}: \")\n    subjects.append(subject_name)\n    total_mark = get_valid_integer_input(\n        f\"Enter the total marks for subject {subject_name}: \", min_val=1\n    )\n    total_marks.append(total_mark)\n    obtained_marks = get_valid_integer_input(",
+        "detail": "Simple_Applications.grade.grade",
+        "documentation": {}
+    },
+    {
+        "label": "total_marks",
+        "kind": 5,
+        "importPath": "Simple_Applications.grade.grade",
+        "description": "Simple_Applications.grade.grade",
+        "peekOfCode": "total_marks = []\nfor i in range(1, num_subjects + 1):\n    subject_name = input(f\"Enter the name of subject {i}: \")\n    subjects.append(subject_name)\n    total_mark = get_valid_integer_input(\n        f\"Enter the total marks for subject {subject_name}: \", min_val=1\n    )\n    total_marks.append(total_mark)\n    obtained_marks = get_valid_integer_input(\n        f\"Enter marks obtained for subject {subject_name}: \",",
+        "detail": "Simple_Applications.grade.grade",
+        "documentation": {}
+    },
+    {
+        "label": "grades",
+        "kind": 5,
+        "importPath": "Simple_Applications.grade.grade",
+        "description": "Simple_Applications.grade.grade",
+        "peekOfCode": "grades = [calculate_grade(marks[i], total_marks[i]) for i in range(num_subjects)]\nprint(\"\\nSubject-wise Grades:\")\nfor i in range(num_subjects):\n    print(f\"{subjects[i]}: {grades[i]}\")\ntotal_obtained_marks = sum(marks)\noverall_percentage = (total_obtained_marks / sum(total_marks)) * 100\noverall_grade = calculate_grade(total_obtained_marks, sum(total_marks))\nprint(\"\\nOverall Grade:\")\nprint(f\"Grade: {overall_grade}\")\nprint(f\"Percentage: {overall_percentage:.2f}%\")",
+        "detail": "Simple_Applications.grade.grade",
+        "documentation": {}
+    },
+    {
+        "label": "total_obtained_marks",
+        "kind": 5,
+        "importPath": "Simple_Applications.grade.grade",
+        "description": "Simple_Applications.grade.grade",
+        "peekOfCode": "total_obtained_marks = sum(marks)\noverall_percentage = (total_obtained_marks / sum(total_marks)) * 100\noverall_grade = calculate_grade(total_obtained_marks, sum(total_marks))\nprint(\"\\nOverall Grade:\")\nprint(f\"Grade: {overall_grade}\")\nprint(f\"Percentage: {overall_percentage:.2f}%\")",
+        "detail": "Simple_Applications.grade.grade",
+        "documentation": {}
+    },
+    {
+        "label": "overall_percentage",
+        "kind": 5,
+        "importPath": "Simple_Applications.grade.grade",
+        "description": "Simple_Applications.grade.grade",
+        "peekOfCode": "overall_percentage = (total_obtained_marks / sum(total_marks)) * 100\noverall_grade = calculate_grade(total_obtained_marks, sum(total_marks))\nprint(\"\\nOverall Grade:\")\nprint(f\"Grade: {overall_grade}\")\nprint(f\"Percentage: {overall_percentage:.2f}%\")",
+        "detail": "Simple_Applications.grade.grade",
+        "documentation": {}
+    },
+    {
+        "label": "overall_grade",
+        "kind": 5,
+        "importPath": "Simple_Applications.grade.grade",
+        "description": "Simple_Applications.grade.grade",
+        "peekOfCode": "overall_grade = calculate_grade(total_obtained_marks, sum(total_marks))\nprint(\"\\nOverall Grade:\")\nprint(f\"Grade: {overall_grade}\")\nprint(f\"Percentage: {overall_percentage:.2f}%\")",
+        "detail": "Simple_Applications.grade.grade",
+        "documentation": {}
+    },
+    {
+        "label": "TimeCalculator",
+        "kind": 6,
+        "importPath": "Simple_Applications.grade.time_calulator",
+        "description": "Simple_Applications.grade.time_calulator",
+        "peekOfCode": "class TimeCalculator:\n    def __init__(self, hours=0, minutes=0, seconds=0):\n        self.total_seconds = self.to_seconds(hours, minutes, seconds)\n    @staticmethod\n    def to_seconds(hours, minutes, seconds):\n        return hours * 3600 + minutes * 60 + seconds\n    def add_time(self, hours=0, minutes=0, seconds=0):\n        self.total_seconds += self.to_seconds(hours, minutes, seconds)\n    def subtract_time(self, hours=0, minutes=0, seconds=0):\n        self.total_seconds -= self.to_seconds(hours, minutes, seconds)",
+        "detail": "Simple_Applications.grade.time_calulator",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "Simple_Applications.graph.app",
+        "description": "Simple_Applications.graph.app",
+        "peekOfCode": "def index():\n    # Plot bar graph with adjusted bar width\n    plt.figure(figsize=(10, 6))\n    colors = ['blue', 'green', 'red', 'orange', 'purple']  # Define colors for bars\n    bar_width = 2  # Define the width of the bars\n    plt.bar(data['Index'], data['Number of employees'], color=colors, width=bar_width)\n    plt.title('Number of Employees by Index')\n    plt.xlabel('Index')\n    plt.ylabel('Number of Employees')\n    # Convert plot to base64 string",
+        "detail": "Simple_Applications.graph.app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "Simple_Applications.graph.app",
+        "description": "Simple_Applications.graph.app",
+        "peekOfCode": "app = Flask(__name__)\n# Load data from CSV\ndata = pd.read_csv('csv_file.csv')\n@app.route('/')\ndef index():\n    # Plot bar graph with adjusted bar width\n    plt.figure(figsize=(10, 6))\n    colors = ['blue', 'green', 'red', 'orange', 'purple']  # Define colors for bars\n    bar_width = 2  # Define the width of the bars\n    plt.bar(data['Index'], data['Number of employees'], color=colors, width=bar_width)",
+        "detail": "Simple_Applications.graph.app",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "Simple_Applications.graph.app",
+        "description": "Simple_Applications.graph.app",
+        "peekOfCode": "data = pd.read_csv('csv_file.csv')\n@app.route('/')\ndef index():\n    # Plot bar graph with adjusted bar width\n    plt.figure(figsize=(10, 6))\n    colors = ['blue', 'green', 'red', 'orange', 'purple']  # Define colors for bars\n    bar_width = 2  # Define the width of the bars\n    plt.bar(data['Index'], data['Number of employees'], color=colors, width=bar_width)\n    plt.title('Number of Employees by Index')\n    plt.xlabel('Index')",
+        "detail": "Simple_Applications.graph.app",
+        "documentation": {}
+    },
+    {
+        "label": "stages",
+        "kind": 5,
+        "importPath": "Simple_Applications.hangman.hangman_art",
+        "description": "Simple_Applications.hangman.hangman_art",
+        "peekOfCode": "stages = ['''\n  +---+\n  |   |\n  O   |\n /|\\  |\n / \\  |\n      |\n=========\n''', '''\n  +---+",
+        "detail": "Simple_Applications.hangman.hangman_art",
+        "documentation": {}
+    },
+    {
+        "label": "logo",
+        "kind": 5,
+        "importPath": "Simple_Applications.hangman.hangman_art",
+        "description": "Simple_Applications.hangman.hangman_art",
+        "peekOfCode": "logo = ''' \n _                                             \n| |                                            \n| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  \n| '_ \\ / _` | '_ \\ / _` | '_ ` _ \\ / _` | '_ \\ \n| | | | (_| | | | | (_| | | | | | | (_| | | | |\n|_| |_|\\__,_|_| |_|\\__, |_| |_| |_|\\__,_|_| |_|\n                    __/ |                      \n                   |___/    '''",
+        "detail": "Simple_Applications.hangman.hangman_art",
+        "documentation": {}
+    },
+    {
+        "label": "word_list",
+        "kind": 5,
+        "importPath": "Simple_Applications.hangman.hangman_words",
+        "description": "Simple_Applications.hangman.hangman_words",
+        "peekOfCode": "word_list = [\n    'abruptly',\n    'absurd',\n    'abyss',\n    'affix',\n    'askew',\n    'avenue',\n    'awkward',\n    'axiom',\n    'azure',",
+        "detail": "Simple_Applications.hangman.hangman_words",
+        "documentation": {}
+    },
+    {
+        "label": "chosen_word",
+        "kind": 5,
+        "importPath": "Simple_Applications.hangman.main",
+        "description": "Simple_Applications.hangman.main",
+        "peekOfCode": "chosen_word = random.choice(hangman_words.word_list)\nword_length = len(chosen_word)\nend_of_game = False\nlives = 6\n# TODO-3: - Import the logo from hangman_art.py and print it at the start of the game.\nprint(hangman_art.logo)\n# Testing code\n# print(f'Pssst, the solution is {chosen_word}.')\n# Create blanks\ndisplay = []",
+        "detail": "Simple_Applications.hangman.main",
+        "documentation": {}
+    },
+    {
+        "label": "word_length",
+        "kind": 5,
+        "importPath": "Simple_Applications.hangman.main",
+        "description": "Simple_Applications.hangman.main",
+        "peekOfCode": "word_length = len(chosen_word)\nend_of_game = False\nlives = 6\n# TODO-3: - Import the logo from hangman_art.py and print it at the start of the game.\nprint(hangman_art.logo)\n# Testing code\n# print(f'Pssst, the solution is {chosen_word}.')\n# Create blanks\ndisplay = []\nfor _ in range(word_length):",
+        "detail": "Simple_Applications.hangman.main",
+        "documentation": {}
+    },
+    {
+        "label": "end_of_game",
+        "kind": 5,
+        "importPath": "Simple_Applications.hangman.main",
+        "description": "Simple_Applications.hangman.main",
+        "peekOfCode": "end_of_game = False\nlives = 6\n# TODO-3: - Import the logo from hangman_art.py and print it at the start of the game.\nprint(hangman_art.logo)\n# Testing code\n# print(f'Pssst, the solution is {chosen_word}.')\n# Create blanks\ndisplay = []\nfor _ in range(word_length):\n    display += \"_\"",
+        "detail": "Simple_Applications.hangman.main",
+        "documentation": {}
+    },
+    {
+        "label": "lives",
+        "kind": 5,
+        "importPath": "Simple_Applications.hangman.main",
+        "description": "Simple_Applications.hangman.main",
+        "peekOfCode": "lives = 6\n# TODO-3: - Import the logo from hangman_art.py and print it at the start of the game.\nprint(hangman_art.logo)\n# Testing code\n# print(f'Pssst, the solution is {chosen_word}.')\n# Create blanks\ndisplay = []\nfor _ in range(word_length):\n    display += \"_\"\nwhile not end_of_game:",
+        "detail": "Simple_Applications.hangman.main",
+        "documentation": {}
+    },
+    {
+        "label": "display",
+        "kind": 5,
+        "importPath": "Simple_Applications.hangman.main",
+        "description": "Simple_Applications.hangman.main",
+        "peekOfCode": "display = []\nfor _ in range(word_length):\n    display += \"_\"\nwhile not end_of_game:\n    guess = input(\"Guess a letter: \").lower()\n    # TODO-4: - If the user has entered a letter they've already guessed, print the letter and let them know.\n    if guess in display:\n        print(\"You have already chosen the word. Try to guess some other word...\")\n        continue\n    # Check guessed letter",
+        "detail": "Simple_Applications.hangman.main",
+        "documentation": {}
+    },
+    {
+        "label": "Calculator",
+        "kind": 6,
+        "importPath": "Simple_Applications.lambda.app",
+        "description": "Simple_Applications.lambda.app",
+        "peekOfCode": "class Calculator:\n    def __init__(self, operation) -> None:\n        self.operation = operation\n    def calculate(self, number_1, number_2):\n        return self.operation(number_1, number_2)\naddition = lambda x, y: x + y\nsubtraction = lambda x, y: x - y\nmultiplication = lambda x, y: x * y\ndivision = lambda x, y: x / y if y != 0 else \"Error: Division by Zero\"\n@app.route(\"/\", methods=[\"GET\",\"POST\"])",
+        "detail": "Simple_Applications.lambda.app",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "Simple_Applications.lambda.app",
+        "description": "Simple_Applications.lambda.app",
+        "peekOfCode": "def home():\n    if request.method == \"POST\":\n        number_1 = float(request.form[\"num1\"])\n        number_2 = float(request.form[\"num2\"])\n        operation = request.form[\"operation\"]\n        if operation == \"add\":\n            calc = Calculator(addition)\n        elif operation == \"subtract\":\n            calc = Calculator(subtraction)\n        elif operation == \"multiply\":",
+        "detail": "Simple_Applications.lambda.app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "Simple_Applications.lambda.app",
+        "description": "Simple_Applications.lambda.app",
+        "peekOfCode": "app = Flask(__name__)\nclass Calculator:\n    def __init__(self, operation) -> None:\n        self.operation = operation\n    def calculate(self, number_1, number_2):\n        return self.operation(number_1, number_2)\naddition = lambda x, y: x + y\nsubtraction = lambda x, y: x - y\nmultiplication = lambda x, y: x * y\ndivision = lambda x, y: x / y if y != 0 else \"Error: Division by Zero\"",
+        "detail": "Simple_Applications.lambda.app",
+        "documentation": {}
+    },
+    {
+        "label": "addition",
+        "kind": 5,
+        "importPath": "Simple_Applications.lambda.app",
+        "description": "Simple_Applications.lambda.app",
+        "peekOfCode": "addition = lambda x, y: x + y\nsubtraction = lambda x, y: x - y\nmultiplication = lambda x, y: x * y\ndivision = lambda x, y: x / y if y != 0 else \"Error: Division by Zero\"\n@app.route(\"/\", methods=[\"GET\",\"POST\"])\ndef home():\n    if request.method == \"POST\":\n        number_1 = float(request.form[\"num1\"])\n        number_2 = float(request.form[\"num2\"])\n        operation = request.form[\"operation\"]",
+        "detail": "Simple_Applications.lambda.app",
+        "documentation": {}
+    },
+    {
+        "label": "subtraction",
+        "kind": 5,
+        "importPath": "Simple_Applications.lambda.app",
+        "description": "Simple_Applications.lambda.app",
+        "peekOfCode": "subtraction = lambda x, y: x - y\nmultiplication = lambda x, y: x * y\ndivision = lambda x, y: x / y if y != 0 else \"Error: Division by Zero\"\n@app.route(\"/\", methods=[\"GET\",\"POST\"])\ndef home():\n    if request.method == \"POST\":\n        number_1 = float(request.form[\"num1\"])\n        number_2 = float(request.form[\"num2\"])\n        operation = request.form[\"operation\"]\n        if operation == \"add\":",
+        "detail": "Simple_Applications.lambda.app",
+        "documentation": {}
+    },
+    {
+        "label": "multiplication",
+        "kind": 5,
+        "importPath": "Simple_Applications.lambda.app",
+        "description": "Simple_Applications.lambda.app",
+        "peekOfCode": "multiplication = lambda x, y: x * y\ndivision = lambda x, y: x / y if y != 0 else \"Error: Division by Zero\"\n@app.route(\"/\", methods=[\"GET\",\"POST\"])\ndef home():\n    if request.method == \"POST\":\n        number_1 = float(request.form[\"num1\"])\n        number_2 = float(request.form[\"num2\"])\n        operation = request.form[\"operation\"]\n        if operation == \"add\":\n            calc = Calculator(addition)",
+        "detail": "Simple_Applications.lambda.app",
+        "documentation": {}
+    },
+    {
+        "label": "division",
+        "kind": 5,
+        "importPath": "Simple_Applications.lambda.app",
+        "description": "Simple_Applications.lambda.app",
+        "peekOfCode": "division = lambda x, y: x / y if y != 0 else \"Error: Division by Zero\"\n@app.route(\"/\", methods=[\"GET\",\"POST\"])\ndef home():\n    if request.method == \"POST\":\n        number_1 = float(request.form[\"num1\"])\n        number_2 = float(request.form[\"num2\"])\n        operation = request.form[\"operation\"]\n        if operation == \"add\":\n            calc = Calculator(addition)\n        elif operation == \"subtract\":",
+        "detail": "Simple_Applications.lambda.app",
+        "documentation": {}
+    },
+    {
+        "label": "ListOperations",
+        "kind": 6,
+        "importPath": "Simple_Applications.list_operations.app",
+        "description": "Simple_Applications.list_operations.app",
+        "peekOfCode": "class ListOperations():\n    @staticmethod\n    def add_element(lst, element):\n        lst.append(element)\n        return lst\n    # helps in performing various operatins on a list\n    @staticmethod\n    def remove_element(lst, element):\n        if element in lst:\n            lst.remove(element)",
+        "detail": "Simple_Applications.list_operations.app",
+        "documentation": {}
+    },
+    {
+        "label": "my_list",
+        "kind": 5,
+        "importPath": "Simple_Applications.list_operations.app",
+        "description": "Simple_Applications.list_operations.app",
+        "peekOfCode": "my_list = [1,2,3,4,5]\nprint(\"------------------------------------\")\nmy_list = ListOperations.add_element(my_list, 6)\nprint(\"List after adding element: \", my_list)  \nmy_list = ListOperations.remove_element(my_list, 3)\nprint(\"List after removing element: \", my_list)  \nprint(\"Number of elements in the list: \", ListOperations.count_element(my_list))\nprint(\"Reversed List: \", ListOperations.reverse_list(my_list))\nprint(\"Sorted List: \", ListOperations.sort_list(my_list))\nprint(\"Sum of elements in the list: \", ListOperations.sum_elements(my_list))",
+        "detail": "Simple_Applications.list_operations.app",
+        "documentation": {}
+    },
+    {
+        "label": "my_list",
+        "kind": 5,
+        "importPath": "Simple_Applications.list_operations.app",
+        "description": "Simple_Applications.list_operations.app",
+        "peekOfCode": "my_list = ListOperations.add_element(my_list, 6)\nprint(\"List after adding element: \", my_list)  \nmy_list = ListOperations.remove_element(my_list, 3)\nprint(\"List after removing element: \", my_list)  \nprint(\"Number of elements in the list: \", ListOperations.count_element(my_list))\nprint(\"Reversed List: \", ListOperations.reverse_list(my_list))\nprint(\"Sorted List: \", ListOperations.sort_list(my_list))\nprint(\"Sum of elements in the list: \", ListOperations.sum_elements(my_list))\nprint(\"--------------------------------------\")",
+        "detail": "Simple_Applications.list_operations.app",
+        "documentation": {}
+    },
+    {
+        "label": "my_list",
+        "kind": 5,
+        "importPath": "Simple_Applications.list_operations.app",
+        "description": "Simple_Applications.list_operations.app",
+        "peekOfCode": "my_list = ListOperations.remove_element(my_list, 3)\nprint(\"List after removing element: \", my_list)  \nprint(\"Number of elements in the list: \", ListOperations.count_element(my_list))\nprint(\"Reversed List: \", ListOperations.reverse_list(my_list))\nprint(\"Sorted List: \", ListOperations.sort_list(my_list))\nprint(\"Sum of elements in the list: \", ListOperations.sum_elements(my_list))\nprint(\"--------------------------------------\")",
+        "detail": "Simple_Applications.list_operations.app",
+        "documentation": {}
+    },
+    {
+        "label": "Questions",
+        "kind": 5,
+        "importPath": "Simple_Applications.quiz_app.quiz_app",
+        "description": "Simple_Applications.quiz_app.quiz_app",
+        "peekOfCode": "Questions = ['An extra piece of information that you pass to the function to customize it for a specific need. \\nA. Selector\\nB. Declaration\\nC. Boundary\\nD. Parameter ',\n             'A connection that uses light to transmit information. \\nA. Pixels\\nB. Vectors\\nC. Ethernet\\nD. Fiber Optic ',\n             'A number assigned to any item that is connected to the Internet. \\nA. Algorithm\\nB. IP Address\\nC. Ping Address\\nD. Binary ',\n             'In coding this returns a value. \\nA. Coding\\nB. Programming\\nC. Function\\nD. Loop ',\n             'A repetitive action or command typically created with programming loops. \\nA. Repetition Command\\nB. Iteration\\nC. Loop\\nD. None of the above ',\n             'Cause the computer to execute the commands you\\'ve written in your program. \\nA. Debug\\nB. Run\\nC. Execute\\nD. Process ',\n             'An error in a program that prevents the program from running as expected. \\nA. Rat\\nB. Villain\\nC. Bat\\nD. Bug ',\n             'Information. Often, quantities, characters, or symbols that are the inputs and outputs of computer programs. \\nA. Bits\\nB. Bugs\\nC. Languages\\nD. Data  ',\n             'Pulling out specific differences to make one solution work for multiple problems. \\nA. Conjunction\\nB. Iteration\\nC. Abstraction\\nD. Conditional ',\n             'Trying again and again, even when something is very hard. \\nA. Persistemce\\nB. Fighting\\nC. Adversity\\nD. Determination ',",
+        "detail": "Simple_Applications.quiz_app.quiz_app",
+        "documentation": {}
+    },
+    {
+        "label": "Answers",
+        "kind": 5,
+        "importPath": "Simple_Applications.quiz_app.quiz_app",
+        "description": "Simple_Applications.quiz_app.quiz_app",
+        "peekOfCode": "Answers = ['D',\n           'D',\n           'B',  # <-- comma added\n           'C',\n           'B',\n           'B',\n           'D',\n           'D',\n           'C',\n           'A',",
+        "detail": "Simple_Applications.quiz_app.quiz_app",
+        "documentation": {}
+    },
+    {
+        "label": "right_ans",
+        "kind": 5,
+        "importPath": "Simple_Applications.quiz_app.quiz_app",
+        "description": "Simple_Applications.quiz_app.quiz_app",
+        "peekOfCode": "right_ans = 0\n# The zip function returns a generator, so we need to transform it to a list object for sample()\nkey = list(zip(Questions, Answers))\n# Sample from key now instead of Questions\ns = sample(key, 10)\nfor i in s:\n    # in each \"i\" tuple [0] is the question, [1] is the answer\n    print(i[0])\n    user_answer = input('Answer: ')\n    if user_answer.lower() == i[1].lower():",
+        "detail": "Simple_Applications.quiz_app.quiz_app",
+        "documentation": {}
+    },
+    {
+        "label": "key",
+        "kind": 5,
+        "importPath": "Simple_Applications.quiz_app.quiz_app",
+        "description": "Simple_Applications.quiz_app.quiz_app",
+        "peekOfCode": "key = list(zip(Questions, Answers))\n# Sample from key now instead of Questions\ns = sample(key, 10)\nfor i in s:\n    # in each \"i\" tuple [0] is the question, [1] is the answer\n    print(i[0])\n    user_answer = input('Answer: ')\n    if user_answer.lower() == i[1].lower():\n        print('Correct!!! +10 points\\n')\n        right_ans += 10",
+        "detail": "Simple_Applications.quiz_app.quiz_app",
+        "documentation": {}
+    },
+    {
+        "label": "s",
+        "kind": 5,
+        "importPath": "Simple_Applications.quiz_app.quiz_app",
+        "description": "Simple_Applications.quiz_app.quiz_app",
+        "peekOfCode": "s = sample(key, 10)\nfor i in s:\n    # in each \"i\" tuple [0] is the question, [1] is the answer\n    print(i[0])\n    user_answer = input('Answer: ')\n    if user_answer.lower() == i[1].lower():\n        print('Correct!!! +10 points\\n')\n        right_ans += 10\n    else:\n        print('Incorrect :(\\n')",
+        "detail": "Simple_Applications.quiz_app.quiz_app",
+        "documentation": {}
+    },
+    {
+        "label": "name",
+        "kind": 5,
+        "importPath": "Simple_Applications.quiz_app.quiz_app",
+        "description": "Simple_Applications.quiz_app.quiz_app",
+        "peekOfCode": "name = input(\"\\nEnter your name: \")\nfile = open(\"scores.txt\", \"a\")\nfile.write(str(right_ans+9) +\"\\t\" + \" | \" + \"\\t\" + name + \"\\n\")\nfile.close()\nfile = open(\"scores.txt\", \"r\")\nlines = file.readlines()\n# lines = file.split(\",\")\n'''\nif right_ans < 10:\n       right_ans = str(right_ans)",
+        "detail": "Simple_Applications.quiz_app.quiz_app",
+        "documentation": {}
+    },
+    {
+        "label": "file",
+        "kind": 5,
+        "importPath": "Simple_Applications.quiz_app.quiz_app",
+        "description": "Simple_Applications.quiz_app.quiz_app",
+        "peekOfCode": "file = open(\"scores.txt\", \"a\")\nfile.write(str(right_ans+9) +\"\\t\" + \" | \" + \"\\t\" + name + \"\\n\")\nfile.close()\nfile = open(\"scores.txt\", \"r\")\nlines = file.readlines()\n# lines = file.split(\",\")\n'''\nif right_ans < 10:\n       right_ans = str(right_ans)\n       right_ans = right_ans.zfill(0)",
+        "detail": "Simple_Applications.quiz_app.quiz_app",
+        "documentation": {}
+    },
+    {
+        "label": "file",
+        "kind": 5,
+        "importPath": "Simple_Applications.quiz_app.quiz_app",
+        "description": "Simple_Applications.quiz_app.quiz_app",
+        "peekOfCode": "file = open(\"scores.txt\", \"r\")\nlines = file.readlines()\n# lines = file.split(\",\")\n'''\nif right_ans < 10:\n       right_ans = str(right_ans)\n       right_ans = right_ans.zfill(0)\nelse:\n       pass'''\nsortedData = (sorted(lines, reverse = True))",
+        "detail": "Simple_Applications.quiz_app.quiz_app",
+        "documentation": {}
+    },
+    {
+        "label": "lines",
+        "kind": 5,
+        "importPath": "Simple_Applications.quiz_app.quiz_app",
+        "description": "Simple_Applications.quiz_app.quiz_app",
+        "peekOfCode": "lines = file.readlines()\n# lines = file.split(\",\")\n'''\nif right_ans < 10:\n       right_ans = str(right_ans)\n       right_ans = right_ans.zfill(0)\nelse:\n       pass'''\nsortedData = (sorted(lines, reverse = True))\nprint(\"\\n   L E A D E R B O A R D\\n\")",
+        "detail": "Simple_Applications.quiz_app.quiz_app",
+        "documentation": {}
+    },
+    {
+        "label": "sortedData",
+        "kind": 5,
+        "importPath": "Simple_Applications.quiz_app.quiz_app",
+        "description": "Simple_Applications.quiz_app.quiz_app",
+        "peekOfCode": "sortedData = (sorted(lines, reverse = True))\nprint(\"\\n   L E A D E R B O A R D\\n\")\nprint(\"Position  Points |\\tName\")\nfor line in range(0, len(sortedData)):\n    print(\"\\t\"+str(line+1)+\"\\t\\t\"+str(sortedData[line]),end=\" \")\nfile.close()\nif __name__ == '__main__':\n    print()",
+        "detail": "Simple_Applications.quiz_app.quiz_app",
+        "documentation": {}
+    }
+]
